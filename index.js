@@ -64,13 +64,10 @@ const promptUser = () =>
       type: 'input',
       name: 'learned',
       message: 'What did you learn?',
-    },
-    
-    
-    
+    }  
   ]);
 
-const generateHTML = (answers) =>
+const generateMarkdown = (answers) =>
 `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,17 +105,15 @@ const generateHTML = (answers) =>
 </html>`;
 
 promptUser()
-  .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-  .then(() => console.log('Successfully wrote to index.html'))
+  .then((answers) => writeFileAsync('README.md', generateMarkdown(answers)))
+  .then(() => console.log('Successfully wrote your README.md'))
   .catch((err) => console.error(err));
+  module.exports = generateMarkdown;
 
 
+// function to generate markdown for README:
+// function generateMarkdown(data) {
+//   return `# ${data.title}
 
-  // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
-
-module.exports = generateMarkdown;
+// `;
+// }
