@@ -8,24 +8,13 @@ const promptUser = () =>
   inquirer.prompt([
     {
       type: 'input',
-      name: 'Tittle',
+      name: 'tittle',
       message: 'What is your project tittle?',
     },
     {
-      type: 'checkbox',
-      name: 'languagues used',
-      message: 'What languages did you use for this project?',
-      choices: 
-    },
-    {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
-    },
-    {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'name',
+      message: 'Enter your Personal name',
     },
     {
       type: 'input',
@@ -37,6 +26,48 @@ const promptUser = () =>
       name: 'linkedin',
       message: 'Enter your LinkedIn URL.',
     },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Please add a short description explaining the what, why, and how. What makes your project stand out?',
+    },
+    {
+      type: 'input',
+      name: 'motivation',
+      message: 'What was your motivation?',
+    },
+    {
+      type: 'input',
+      name: 'why',
+      message: 'Why did you build this project? What problem does it solve?',
+    },
+    {
+      type: 'checkbox',
+      name: 'languagues',
+      message: 'What languages did you use for this project?',
+      choices: [
+        {
+          nme: 'HTML'
+        },
+        {
+          name: 'CSS'
+        },
+        {
+          name: 'javaScript'
+        },
+        {
+          name: 'Node.js'
+        }
+      ]
+    },
+    {
+      type: 'input',
+      name: 'learned',
+      message: 'What did you learn?',
+    },
+    
+    
+    
   ]);
 
 const generateHTML = (answers) =>
@@ -51,13 +82,26 @@ const generateHTML = (answers) =>
 <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">${answers.Tittle}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <h1 class="display-4">${answers.tittle}</h1>
+    <h2 class="lead">${answers.name}.</h2>
+  
+    <p class="lead">${answers.description}.</p>
+    <p class="lead">${answers.motivation}.</p>
+    <p class="lead">${answers.why}.</p>
+
+    <h1 class="lead">Languages did you use for this project: </h1>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-    </ul>
+    <li class="list-group-item"> ${answers.languagues}</li>
+  </ul>
+
+    <p class="lead">${answers.learned}.</p>
+    
+  <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+  <ul class="list-group">
+    <li class="list-group-item">My GitHub username is ${answers.github}</li>
+    <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+  </ul>
+    
   </div>
 </div>
 </body>
@@ -67,3 +111,14 @@ promptUser()
   .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
   .then(() => console.log('Successfully wrote to index.html'))
   .catch((err) => console.error(err));
+
+
+
+  // function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title}
+
+`;
+}
+
+module.exports = generateMarkdown;
