@@ -1,6 +1,7 @@
 function generateReadme(answers) {
     return `
-<h1 align="center">${answers.title}</h1>
+
+${answers.title}
   
 
 ## Description
@@ -22,7 +23,7 @@ ${answers.usage}
 <br />
 This application is covered by the ${answers.license} license. 
 ## Languages
-${answers.languagues}
+${answers.languagues.join(', ')}
 ## Contributing
 ${answers.contributing}
 ## Tests

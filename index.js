@@ -10,8 +10,8 @@ const promptUser = () =>
   inquirer.prompt([
     {
       type: 'input',
-      name: 'tittle',
-      message: 'What is the project tittle?',
+      name: 'title',
+      message: 'What is the project title?',
     },
     {
       type: 'input',
@@ -48,7 +48,7 @@ const promptUser = () =>
       message: 'What languages did you use for this project?',
       choices: [
       {
-        nme: 'HTML'
+        name: 'HTML'
       },
       {
         name: 'CSS'
@@ -98,6 +98,7 @@ async function init() {
       // Ask user questions and generate responses
       const answers = await promptUser();
       const generateContent = generateReadme(answers);
+      //console.log(answers);
       // Write new README.md to dist directory
       await writeFileAsync('./dist/README.md', generateContent);
       console.log('✔️  Successfully wrote to README.md');
