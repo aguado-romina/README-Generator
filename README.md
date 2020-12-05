@@ -1,12 +1,12 @@
 
 # Title
-kkkllll
+README.md Generator: Node.js
   
 
 ## Description
-lll
+The what, why, and how:
 ## Table of Contents
-- [Description](#description) done
+- [Description](#description) 
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -14,15 +14,19 @@ lll
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-lll
+This is a command-line application that runs with Node.js that dynamically generates a README.md file based on input about your project. Check out the ExampleREADME.md in this repo as an example.
 ## Usage
-lll
+When you run node index.js, the application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub and about your project.
+
+## Screenshots
+![alt text]()
+
 ## License
-![badge](https://img.shields.io/badge/license-Apache-brightgreen)
+Apache
 <br />
 This application is covered by the Apache license. 
 ## Languages
-
+javaScript, Node.js
 ## Contributing
 
 ## Tests
@@ -32,8 +36,8 @@ This application is covered by the Apache license.
 ## Questions
 <br />
 <br />
-:octocat: Find me on GitHub: [undefined](https://github.com/undefined)<br />
+Find me on GitHub: [aguado-romina](https://github.com/aguado-romina)<br />
 <br />
-✉️ Email me with any questions: <br /><br />
-_This README was generated with by [README-generator](https://github.com/jpd61/README-generator)_
+Email me with any questions: aguado.romi@gmail.com<br /><br />
+_This README was generated with by [README-generator](https://https://github.com/aguado-romina/professionalREADMEgenerator) _
     
