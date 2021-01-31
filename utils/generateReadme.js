@@ -1,7 +1,7 @@
 function generateReadme(answers) {
-    return `
-# Title
-${answers.title}
+  return `
+## ${answers.title}
+
   
 
 ## Description
@@ -23,7 +23,7 @@ ${answers.license}
 <br />
 This application is covered by the ${answers.license} license. 
 ## Languages
-${answers.languagues.join(', ')}
+${answers.languagues.join(", ")}
 ## Contributing
 ${answers.contributing}
 ## Tests
@@ -33,11 +33,13 @@ ${answers.learned}
 ## Questions
 ${answers.questions}<br />
 <br />
-Find me on GitHub: [${answers.github}](https://github.com/${answers.github})<br />
+Find me on GitHub: [${answers.github}](https://github.com/${
+    answers.github
+  })<br />
 <br />
 Email me with any questions: ${answers.email}<br /><br />
 _This README was generated with by [README-generator](https://https://github.com/aguado-romina/professionalREADMEgenerator) _
     `;
-  }
-  
-  module.exports = generateReadme;
+}
+
+module.exports = generateReadme;

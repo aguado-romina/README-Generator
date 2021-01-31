@@ -1,10 +1,8 @@
-# Title
-
-Professional README Generator
+## Professional README Generator
 
 ## Description
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project.
+When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project.
 
 ## Table of Contents
 
@@ -26,9 +24,9 @@ To dynamically generates a professional README.md file from a user's input using
 
 ## License
 
-Apache
+Open
 <br />
-This application is covered by the Apache license.
+This application is covered by the Open license.
 
 ## Languages
 
@@ -36,13 +34,15 @@ javaScript, Node.js
 
 ## Contributing
 
-Romina Aguado
+Romina Aguado Solo Developer
 
 ## Tests
 
-No Test
+No
 
 ## Learnings
+
+To develop a command-line application that accepts user input to generate a README
 
 ## Questions
 
